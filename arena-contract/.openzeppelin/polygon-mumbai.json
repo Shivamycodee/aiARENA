@@ -1,0 +1,280 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0x5d2668511d45D80717e13AA0E231fAe3b9f0d228",
+    "txHash": "0x9e0811ec32253c9505998616f5d3d6f1fd5065ff02e964d2f602fbf32f1025de"
+  },
+  "proxies": [
+    {
+      "address": "0x0dF00373c8Be49608111D7B886eD109336575ffE",
+      "txHash": "0x8c38b95695cf00413fd01c334fe805aec612bad5248739cc65b41135af7fa748",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "2e7bf50e400942d5f72168a464671b574f9dadd49fcca84ebe5cac1b045c4986": {
+      "address": "0xAF313492753bFF4a17Ab86FEE676eD5612266B37",
+      "txHash": "0x6f1e516fa8a01c7b7cc77f55cf6ae13ebf9b0fd180a683b1786f1bbf81bdf50e",
+      "layout": {
+        "solcVersion": "0.8.18",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:63",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:68"
+          },
+          {
+            "label": "owner",
+            "offset": 2,
+            "slot": "0",
+            "type": "t_address",
+            "contract": "AIArena",
+            "src": "contracts\\aiArena.sol:9"
+          },
+          {
+            "label": "TicketPerEther",
+            "offset": 22,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "AIArena",
+            "src": "contracts\\aiArena.sol:10"
+          },
+          {
+            "label": "WinMultiplier",
+            "offset": 23,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "AIArena",
+            "src": "contracts\\aiArena.sol:11"
+          },
+          {
+            "label": "ticket",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "AIArena",
+            "src": "contracts\\aiArena.sol:24"
+          },
+          {
+            "label": "deposit",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "AIArena",
+            "src": "contracts\\aiArena.sol:25"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "f06673c95802d1069b1febb1e05f6dad8ae58ae73c19244b399e1dcf353237e0": {
+      "address": "0x908400AB65beF1aa34200189b8cA11EB4233a163",
+      "txHash": "0xfd888cf0bbcf7a1a4bd56a2bbb71338e03193fe75f79df327dc388389f3c28a7",
+      "layout": {
+        "solcVersion": "0.8.18",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:63",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:68"
+          },
+          {
+            "label": "owner",
+            "offset": 2,
+            "slot": "0",
+            "type": "t_address",
+            "contract": "AIArena",
+            "src": "contracts\\aiArena.sol:9"
+          },
+          {
+            "label": "TicketPerEther",
+            "offset": 22,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "AIArena",
+            "src": "contracts\\aiArena.sol:10"
+          },
+          {
+            "label": "WinMultiplier",
+            "offset": 23,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "AIArena",
+            "src": "contracts\\aiArena.sol:11"
+          },
+          {
+            "label": "ticket",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "AIArena",
+            "src": "contracts\\aiArena.sol:24"
+          },
+          {
+            "label": "deposit",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "AIArena",
+            "src": "contracts\\aiArena.sol:25"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "84a3d6f0a9983b61f176ece6871beb85344e9f4a3a0bef13359aee604bdb7940": {
+      "address": "0xFa0E0f81f5eC24B4a5bCcCeb4cBc008d74a3C99E",
+      "txHash": "0x2c1eeef282c38a3fe03600f76ce850d024cbd3fd5d9757f4623bde78b31d9587",
+      "layout": {
+        "solcVersion": "0.8.18",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:63",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:68"
+          },
+          {
+            "label": "owner",
+            "offset": 2,
+            "slot": "0",
+            "type": "t_address",
+            "contract": "AIArena",
+            "src": "contracts\\aiArena.sol:9"
+          },
+          {
+            "label": "TicketPerEther",
+            "offset": 22,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "AIArena",
+            "src": "contracts\\aiArena.sol:10"
+          },
+          {
+            "label": "WinMultiplier",
+            "offset": 23,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "AIArena",
+            "src": "contracts\\aiArena.sol:11"
+          },
+          {
+            "label": "ticket",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "AIArena",
+            "src": "contracts\\aiArena.sol:24"
+          },
+          {
+            "label": "deposit",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "AIArena",
+            "src": "contracts\\aiArena.sol:25"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    }
+  }
+}
