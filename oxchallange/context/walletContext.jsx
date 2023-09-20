@@ -54,6 +54,7 @@ export default function WalletContextProvider({children}) {
       }
   };
 
+
 const Deposit = async () => {
   try {
     const amt = ethers.utils.parseEther("2");
@@ -85,19 +86,13 @@ const Play = async (result) => {
 };
 
 
+useEffect(() => {
+  getUserDeposit();
+  getUserTickets();
+  getWithdrawableBalance();
+}, [address]);
 
 
-  setInterval(() => {
-    getUserDeposit();
-    getUserTickets();
-    getWithdrawableBalance();
-  }, 5000);
-
-  useEffect(() => {
-    getUserDeposit();
-    getUserTickets();
-    getWithdrawableBalance();
-  }, [address]);
 
     return (
       <walletContext.Provider

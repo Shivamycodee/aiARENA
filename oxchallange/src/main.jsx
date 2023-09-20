@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import App from './pages/App.jsx'
 import "@rainbow-me/rainbowkit/styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import WalletContextProvider from "../context/walletContext.jsx";
-
+import Layout from "./components/layout";
 
 import {
   getDefaultWallets,
@@ -51,9 +51,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       coolMode
       >
       <WalletContextProvider>
+        <Layout>
       <React.StrictMode>
         <App />
       </React.StrictMode>
+        </Layout>
   </WalletContextProvider>
     </RainbowKitProvider>
   </WagmiConfig>

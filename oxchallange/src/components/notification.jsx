@@ -1,6 +1,5 @@
 import React,{useState} from 'react'
 import "../styles/notification.scss";
-import { useGlobalContext } from '../../context/walletContext';
 
 
 function Notification({ result, setResult, setBoard }) {
@@ -19,10 +18,8 @@ function Notification({ result, setResult, setBoard }) {
 
   const resultMsg = () => {
     if (result === "X") {
-        Play(false);
         return "You Lost!";
     } else if (result === "O") {
-        Play(true);
         return "You Won!";
     } else if (result === "tie") {
         return "It's a Tie!";
@@ -37,40 +34,40 @@ function Notification({ result, setResult, setBoard }) {
         result === "X" ? (
           <div className="container-notify" style={{ margin: "6% 7%" }}>
             <div id="error-box">
-              <div class="dot"></div>
-              <div class="dot two"></div>
-              <div class="face2">
-                <div class="eye"></div>
-                <div class="eye right"></div>
-                <div class="mouth sad"></div>
+              <div className="dot"></div>
+              <div className="dot two"></div>
+              <div className="face2">
+                <div className="eye"></div>
+                <div className="eye right"></div>
+                <div className="mouth sad"></div>
               </div>
-              <div class="shadow move"></div>
-              <div class="message">
-                <h1 class="alert">{resultMsg()}</h1>
+              <div className="shadow move"></div>
+              <div className="message">
+                <h1 className="alert">{resultMsg()}</h1>
                 <p>Give it another shot. 😉</p>
               </div>
-              <button onClick={() => changeResult()} class="button-box">
-                <h1 class="red">Restart</h1>
+              <button onClick={() => changeResult()} className="button-box">
+                <h1 className="red">Restart</h1>
               </button>
             </div>
           </div>
         ) : (
           <div className="container-notify">
             <div id="success-box">
-              <div class="dot"></div>
-              <div class="dot two"></div>
-              <div class="face">
-                <div class="eye"></div>
-                <div class="eye right"></div>
-                <div class="mouth happy"></div>
+              <div className="dot"></div>
+              <div className="dot two"></div>
+              <div className="face">
+                <div className="eye"></div>
+                <div className="eye right"></div>
+                <div className="mouth happy"></div>
               </div>
-              <div class="shadow scale"></div>
-              <div class="message">
-                <h1 class="alert">{resultMsg()}</h1>
+              <div className="shadow scale"></div>
+              <div className="message">
+                <h1 className="alert">{resultMsg()}</h1>
                 <p>wanna give another try 🚀</p>
               </div>
-              <button onClick={() => changeResult()} class="button-box">
-                <h1 class="green">Restart</h1>
+              <button onClick={() => changeResult()} className="button-box">
+                <h1 className="green">Restart</h1>
               </button>
             </div>
           </div>

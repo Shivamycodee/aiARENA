@@ -23,8 +23,7 @@
 
 
 #full-body{
-  background: linear-gradient(to bottom, #e3eeff,#7e9ff2,#f3e7e9);
-  height: 100vh;
+  min-height: 100vh;
 }
 
   /* card css */

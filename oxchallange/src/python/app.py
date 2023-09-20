@@ -6,7 +6,6 @@ app = Flask(__name__)
 CORS(app)
 
 board = [None for _ in range(9)]
-myDepth = set()
 
 @app.route('/')
 def index():
@@ -14,9 +13,8 @@ def index():
 
 @app.route('/new_game', methods=['POST'])
 def new_game():
-    global board, myDepth
+    global board
     board = [None for _ in range(9)]
-    myDepth = set()
     return jsonify({"message": "New game started"}), 200
 
 
@@ -36,10 +34,7 @@ def is_winner(board, symbol):
 def is_full(board):
     return all(cell is not None for cell in board)
 
-def minimax(board, depth, maximizing):
-    global myDepth
-    if depth not in myDepth:
-        myDepth.add(depth)
+def minimax(board, depth, maximizing,alpha,beta):
 
     winx = is_winner(board, 'X')
     wino = is_winner(board, 'O')
@@ -55,30 +50,35 @@ def minimax(board, depth, maximizing):
         for i in range(9):
             if board[i] is None:
                 board[i] = 'X'
-                eval = minimax(board, depth + 1, False)
+                eval = minimax(board, depth + 1, False,alpha,beta)
                 board[i] = None
                 max_eval = max(max_eval, eval)
+                if beta <= alpha:
+                    break
         return max_eval
     else:
         min_eval = float('inf')
         for i in range(9):
             if board[i] is None:
                 board[i] = 'O'
-                eval = minimax(board, depth + 1, True)
+                eval = minimax(board, depth + 1, True,alpha,beta)
                 board[i] = None
                 min_eval = min(min_eval, eval)
+                if beta <= alpha:
+                    break
         return min_eval
 
 def best_move(board):
-    global myDepth
-    myDepth = set()
+        
+    alpha = float('-inf')
+    beta = float('inf')
 
     max_eval = float('-inf')
     move = None
     for i in range(9):
         if board[i] is None:
             board[i] = 'X'
-            eval = minimax(board, 0, False)
+            eval = minimax(board, 0, False,alpha,beta)
             board[i] = None
             if eval > max_eval:
                 max_eval = eval

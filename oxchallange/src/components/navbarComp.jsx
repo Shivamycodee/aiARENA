@@ -24,7 +24,7 @@ function NavbarComp() {
     <>
       <Navbar bg="dark" data-bs-theme="dark" className="navbar-comp">
         <Container>
-          <Navbar.Brand href="#home" style={{ fontSize: 32 }}>
+          <Navbar.Brand href="/" style={{ fontSize: 32 }}>
             <img
               alt=""
               src={Logo}
@@ -48,7 +48,7 @@ function NavbarComp() {
             width="50"
             height="50"
             // className="d-inline-block align-top"
-            style={{ marginRight: 10 }}
+            // style={{ marginRight: 10 }}
           />
         </Button>
       </Navbar>
@@ -68,9 +68,9 @@ function NavbarComp() {
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <img alt="" src={User} width="100%" height="40%" />
+          <img alt="" src={User} width="90%" height="40%" />
           <div
-            style={{ minHeight: "50%", minWidth: "85%" }}
+            style={{ minHeight: "50%", minWidth: "87%" }}
             className="card card-5"
           >
             <div className="card__icon">

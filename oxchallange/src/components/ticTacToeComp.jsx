@@ -5,14 +5,11 @@ import Col from "react-bootstrap/Col";
 import "../styles/tictactoe.css";
 import Notification from "./notification";
 import { makeMove } from "../api/move";
-import { useGlobalContext } from "../../context/walletContext";
 
 export default function TicTacToe() {
 
   const [board, setBoard] = useState(Array(9).fill(null));
   const [result, setResult] = useState(null);
-
-  const { Play } = useGlobalContext();
 
 
 const renderSquare = (index) => (
@@ -44,7 +41,6 @@ const renderSquare = (index) => (
    }
 
    if (data && data.winner !== undefined) {
-    //  alert("Play RUN")
      setResult(data.winner);
     //  if(data.winner === "X") Play(false);
     //  else if(data.winner === "O") Play(true);
@@ -56,7 +52,7 @@ const renderSquare = (index) => (
   return (
     <>
       {result === null ? (
-        <Container style={{ margin: "8% 0 0 19%", width: "60%" }}>
+        <Container style={{ margin: "8% 0 0 22%", width: "50%" }}>
           <Row className="board-row">
             {renderSquare(0)}
             {renderSquare(1)}
