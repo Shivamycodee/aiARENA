@@ -24,19 +24,19 @@
     <li>
         🕹️ <b>AI Arena Application:</b> This is the heart of the gaming platform. Want to explore the frontend and backend logic of our gaming platform? Dive in!
         <ul>
-            <li><a href="aiArena-app">Click here to explore the <b>aiArena-app</b> folder.</a></li>
+            <li><a href="https://github.com/Shivamycodee/aiARENA/tree/main/aiArena-app">Click here to explore the <b>aiArena-app</b> folder.</a></li>
         </ul>
     </li>
     <li>
         💸 <b>Gameplay Smart Contract:</b> Powering our platform's ticketing system, this folder contains the blockchain smart contracts, ensuring secure and efficient transactions.
         <ul>
-            <li><a href="arean-contract">Click here to delve into the <b>arean-contract</b> directory.</a></li>
+            <li><a href="https://github.com/Shivamycodee/aiARENA/tree/main/arena-contract">Click here to delve into the <b>arean-contract</b> directory.</a></li>
         </ul>
     </li>
     <li>
         🧠 <b>Trained AI Models:</b> Here lies the intelligence behind our games. Trained on data from grandmaster games, these models are ready to challenge players of all levels.
         <ul>
-            <li><a href="models">Venture into the <b>models</b> folder to discover more.</a></li>
+            <li><a href="https://github.com/Shivamycodee/aiARENA/tree/main/model">Venture into the <b>models</b> folder to discover more.</a></li>
         </ul>
     </li>
 </ul>
