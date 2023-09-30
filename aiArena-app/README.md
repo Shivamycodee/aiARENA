@@ -21,6 +21,7 @@
     <ul>
         <li>🔳 Chess</li>
         <li>❌⭕ Tic Tac Toe</li>
+        <li>More comming soon...</li>
     </ul>
     <li>Deposit <i>Matic</i> to get tickets to play games. This is handled via a robust smart contract developed on Hardhat.</li>
     <li>🎉 For now, enjoy unlimited gameplay for FREE! No tickets required.</li>
