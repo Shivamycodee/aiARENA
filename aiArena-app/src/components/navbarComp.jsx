@@ -22,7 +22,7 @@ function NavbarComp() {
 
   return (
     <>
-      <Navbar bg="dark" data-bs-theme="dark" className="navbar-comp">
+      <Navbar bg="dark" style={{boxShadow:"0px -20px 40px 0px #4c67aa"}} data-bs-theme="dark" className="navbar-comp">
         <Container>
           <Navbar.Brand href="/" style={{ fontSize: 32 }}>
             <img
@@ -47,8 +47,6 @@ function NavbarComp() {
             src={UserButton}
             width="50"
             height="50"
-            // className="d-inline-block align-top"
-            // style={{ marginRight: 10 }}
           />
         </Button>
       </Navbar>

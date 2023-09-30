@@ -122,5 +122,17 @@
 
 #basicBoard-cont{
 width: 41%;
-margin:0 auto;
+margin:0 1%;
+}
+
+#chess-container{
+  display: flex;
+}
+
+#chess-piecesHolder{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 5%;
+
 }
