@@ -1,20 +1,34 @@
 # app.py
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
+global games
+games = {}
+
+global board
 board = [None for _ in range(9)]
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return "API IS RUNNING" , 200
+  
 
-@app.route('/new_game', methods=['POST'])
+@app.route('/new_game', methods=['POST','OPTIONS'])
 def new_game():
+    
+    if request.method == 'OPTIONS':
+        return jsonify({'status': 'OK'}), 200
+    
+    game_token = request.json.get('game_token')
+    if not game_token:
+        return jsonify({"error": "Game token not provided"}), 400
+    
     global board
-    board = [None for _ in range(9)]
+    # board = [None for _ in range(9)]
+    games[game_token] = [None for _ in range(9)]  # Initialize board
     return jsonify({"message": "New game started"}), 200
 
 
@@ -85,25 +99,38 @@ def best_move(board):
                 move = i
     return move
 
-@app.route('/move', methods=['POST'])
+@app.route('/move', methods=['POST','OPTIONS'])
+
 def make_move():
-    global board
+
+    if request.method == 'OPTIONS':
+        return jsonify({'status': 'OK'}), 200
+    
+    game_token = request.json.get('game_token')
+    if not game_token or game_token not in games:
+        return jsonify({"error": "Invalid game token"}), 400
+    
+    board = games[game_token]
     index = int(request.json['index'])
     board[index] = 'O'
 
     if is_winner(board, 'O'):
+        games.pop(game_token,None)
         return jsonify({'winner': 'O'})
 
     if is_full(board):
+        games.pop(game_token,None)
         return jsonify({'winner': 'tie'})
 
     ai_move = best_move(board)
     board[ai_move] = 'X'
 
     if is_winner(board, 'X'):
+        games.pop(game_token,None)
         return jsonify({'winner': 'X', 'ai_move': ai_move})
 
     if is_full(board):
+        games.pop(game_token,None)
         return jsonify({'winner': 'tie'})
 
     return jsonify({'ai_move': ai_move})

@@ -66,7 +66,7 @@ button, .dot {
   position: absolute;
   width: 35%;
   height: 100%;
-  left: 12%;
+  left: 13%;
   background: linear-gradient(to bottom right, $success 40%, $secondary 100%);
   border-radius: 20px;
   box-shadow: 5px 5px 20px rgba($gray, 10%);
@@ -74,14 +74,13 @@ button, .dot {
 }
 
 #error-box {
-  position: absolute;
   width: 35%;
   height: 100%;
-  right: 12%;
+  margin-left:13%;
   background: linear-gradient(to bottom left, $error 40%, $orange 100%);
   border-radius: 20px;
   box-shadow: 5px 5px 20px rgba($gray, 10%);
-    perspective: 40px;
+  perspective: 40px;
 
 }
 
@@ -159,7 +158,6 @@ button, .dot {
 }
 
 .sad {
-  top: 49%;
   border: 2px solid;
   border-color: $dark transparent transparent $dark;
   transform: rotate(45deg);

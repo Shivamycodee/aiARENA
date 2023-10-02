@@ -1,18 +1,20 @@
 import React,{useState} from 'react'
 import "../styles/notification.scss";
+import {newGame} from '../api/move';
+import { v4 as uuidv4 } from "uuid";
 
 
-function Notification({ result, setResult, setBoard }) {
+function Notification({ result, setResult, setBoard,setGameToken,setWinningPattern }) {
 
   const changeResult = async() => {
     setResult(null);
     setBoard(Array(9).fill(null));
 
-  const response = await fetch("http://127.0.0.1:5000/new_game", {
-    method: "POST",
-  });
-  const data = await response.json();
-  console.log(data.message);  
+    const gameToken = uuidv4();
+    const data = await newGame(gameToken);
+    setGameToken(gameToken);
+    setWinningPattern([]);
+    console.log(data.message);
 
   };
 
@@ -32,7 +34,7 @@ function Notification({ result, setResult, setBoard }) {
     <>
       {result !== null ? (
         result === "X" ? (
-          <div className="container-notify" style={{ margin: "6% 7%" }}>
+          <div className="container-notify">
             <div id="error-box">
               <div className="dot"></div>
               <div className="dot two"></div>
