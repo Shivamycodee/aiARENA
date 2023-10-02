@@ -24,7 +24,7 @@
     <li>
         🕹️ <b>AI Arena Application:</b> This is the heart of the gaming platform. Want to explore the frontend and backend logic of our gaming platform? Dive in!
         <ul>
-            <li><a href="https://github.com/Shivamycodee/aiARENA/tree/main/aiArena-app">Click here to explore the <b>aiArena-app</b> folder.</a></li>
+            <li><a href="https://github.com/Shivamycodee/aiarena-verse">Click here to explore the <b>aiArena-app</b> folder.</a></li>
         </ul>
     </li>
     <li>
